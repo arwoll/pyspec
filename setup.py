@@ -58,11 +58,11 @@ except ImportError:
 
 install_requires = ['numpy']
 
-datashm_dir = 'pyspec/datashm'
+datashm_dir = 'python/datashm'
 datashm_sources = ['datashm_py.c', 'sps.c']
 datashm_sources = [os.path.join(datashm_dir, c_file) for c_file in datashm_sources]
 
-datashm_ext = Extension('pyspec/datashm',
+datashm_ext = Extension('python/datashm',
                     include_dirs = [datashm_dir],
                     sources = datashm_sources,)
 
